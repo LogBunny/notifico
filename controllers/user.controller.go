@@ -84,7 +84,7 @@ func SendTelegramNotification(c *fiber.Ctx) error {
 		}
 		return views.InternalServerError(c, err)
 	}
-	message := fmt.Sprintf("New Mail recevied:\nFrom:%s\nSubject:%s\nBody:%s", userEmailData.From, userEmailData.Subject, userEmailData.Body)
+	message := fmt.Sprintf("New Mail recevied:\nFrom:%s\nSubject:%s", userEmailData.From, userEmailData.Subject)
 	go utils.SendNotificationMessage(user.TelegramId, message)
 
 	return views.StatusOK(c, "ok")

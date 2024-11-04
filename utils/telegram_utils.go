@@ -11,6 +11,7 @@ import (
 )
 
 func SendNotificationMessage(chatID, message string) error {
+
 	telegramMessage := schemas.TelegramMessageSchema{
 		ChatID: chatID,
 		Text:   message,
@@ -18,6 +19,7 @@ func SendNotificationMessage(chatID, message string) error {
 	url := fmt.Sprintf("https://api.telegram.org/bot%s/sendMessage", config.TELEGRAM_BOT_TOKEN)
 
 	jsonData, err := json.Marshal(telegramMessage)
+	log.Println(url, string(jsonData))
 	if err != nil {
 		log.Println(err)
 		return err
