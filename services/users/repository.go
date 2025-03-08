@@ -1,6 +1,6 @@
 package users
 
-import "logbun/models"
+import "logbun/pkg/models"
 
 type Repository interface {
 	CreateUser(user models.User) (*models.User, error)

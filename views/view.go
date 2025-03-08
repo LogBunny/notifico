@@ -20,7 +20,7 @@ func InternalServerError(c *fiber.Ctx, err error) error {
 		Status(500).
 		JSON(fiber.Map{
 			"status": "fail",
-			"err":    "something went wrong",
+			"err":    err.Error(),
 		})
 }
 

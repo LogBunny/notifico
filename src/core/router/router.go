@@ -8,4 +8,6 @@ func MountRoutes(app *fiber.App) {
 	v1 := api.Group("/v1")
 	userRoute := v1.Group("/user")
 	userRouter(userRoute)
+	emailRoute := v1.Group("/emails")
+	emailRouter(emailRoute)
 }

@@ -1,7 +1,7 @@
 package users
 
 import (
-	"logbun/models"
+	"logbun/pkg/models"
 
 	"gorm.io/gorm"
 )

@@ -2,10 +2,10 @@ package migrations
 
 import (
 	"logbun/db"
-	"logbun/models"
+	"logbun/pkg/models"
 )
 
 func Migrate() {
 	database := db.GetDB()
-	database.AutoMigrate(&models.User{})
+	database.AutoMigrate(&models.Email{})
 }

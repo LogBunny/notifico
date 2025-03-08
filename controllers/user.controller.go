@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 	"logbun/db"
-	"logbun/models"
+	"logbun/pkg/models"
 	"logbun/schemas"
 	"logbun/utils"
 	"logbun/views"
